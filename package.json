@@ -1,0 +1,20 @@
+{
+  "name": "standards",
+  "version": "1.0.0",
+  "description": "implementación de estándares erc20, erc721 y erc1155",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gerardo Galicia",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.2.0",
+    "hardhat": "^2.22.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "prompt-sync": "^4.2.0"
+  }
+}
