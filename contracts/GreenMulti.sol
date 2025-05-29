@@ -5,8 +5,8 @@ import "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
 contract GreenMulti is ERC1155, AccessControl {
-    bytes32 public constant CERTIFYING_AUTH_ROLE = keccak256("CERTIFYING_AUTH_ROLE");
-    bytes32 public constant PRODUCING_CO_ROLE = keccak256("PRODUCING_CO_ROLE");
+    bytes32 public constant CERTIFYING_AUTH_ROLE = keccak256("CERTIFYING_AUTH");
+    bytes32 public constant PRODUCING_CO_ROLE = keccak256("PRODUCING_CO");
 
     uint256 public constant GREEN_TOKEN = 0;
     uint256 public constant GREEN_LAND = 1;

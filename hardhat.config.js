@@ -9,7 +9,7 @@ module.exports = {
       url: "http://127.0.0.1:8545",
     },
     besu: {
-      url: "http://192.168.0.9:8546",
+      url: "http://192.168.0.8:8545",
       accounts: [process.env.BESU_PRIVATE_KEY]
     },
     amoy: {
