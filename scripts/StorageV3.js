@@ -3,6 +3,9 @@ const prompt = require('prompt-sync')();
 require('dotenv').config();
 
 async function main() {
+  const proxyAddress = prompt('Dirección del proxy: ') || "0x9a3DBCa554e9f6b9257aAa24010DA8377C57c17e";
+  
+  console.log(`Dirección recibida: ${proxyAddress}`);
   // Obtenemos el contrato para desplegar
   const StorageV3 = await ethers.getContractFactory("StorageV3");
   
@@ -12,7 +15,7 @@ async function main() {
   console.log("StorageV3 desplegado en:", await storageV3.getAddress());
 
   console.log("Actualizando contrato StorageProxy...");
-  const storageProxy = await upgrades.upgradeProxy('0x05d91B9031A655d08E654177336d08543ac4B711', StorageV3);
+  const storageProxy = await upgrades.upgradeProxy(proxyAddress, StorageV3);
   await storageProxy.waitForDeployment();
   console.log("StorageProxy actualizado");
 
